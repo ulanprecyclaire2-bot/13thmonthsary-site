@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  text-align: center;
+  overflow-x: hidden;
+
+  background: linear-gradient(-45deg, #4b0082, #6a5acd, #1e90ff, #8a2be2);
+  background-size: 400% 400%;
+  animation: bg 10s ease infinite;
+}
+
+@keyframes bg {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.container {
+  padding: 20px;
+}
+
+h1 {
+  color: white;
+  text-shadow: 0 0 10px white;
+}
+
+.card {
+  background: rgba(255,255,255,0.15);
+  padding: 20px;
+  margin: 15px auto;
+  width: 85%;
+  max-width: 500px;
+  border-radius: 20px;
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #8a2be2;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #1e90ff;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* shake animation for wrong password */
+.shake {
+  animation: shake 0.4s;
+}
+
+@keyframes shake {
+  0% {transform: translateX(0);}
+  25% {transform: translateX(-5px);}
+  50% {transform: translateX(5px);}
+  75% {transform: translateX(-5px);}
+  100% {transform: translateX(0);}
+}
+
+/* hearts */
+.heart {
+  position: fixed;
+  color: white;
+  animation: floatUp 4s linear infinite;
+}
+
+@keyframes floatUp {
+  from {transform: translateY(100vh);}
+  to {transform: translateY(-10vh);}
+}
